@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(360,640);
+  createCanvas(windowWidth,windowHeight);
   angleMode(DEGREES);
   //Deal with microphone
   mic = new p5.AudioIn();
@@ -29,4 +29,8 @@ function draw() {
     endShape();
   pop();  //All transformation are now dropped and the coordinate system is resetted.
   
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth,windowHeight);
 }
