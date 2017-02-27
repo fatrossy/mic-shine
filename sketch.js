@@ -19,12 +19,11 @@ function draw() {
   push();  //Start with transformations
   translate(width/2,height/2);
   var size = map(volume,0,1,0,90);
-  stroke(2);
   beginShape();
     for (var i =0; i<=360; i ++){
       var x = 200*pow(cos(i)*cos(size),3);
       var y = 200*pow(sin(i)*sin(size),3);
-      stroke(2);
+      noStroke();
       curveVertex(x,y);
     }
     endShape();
