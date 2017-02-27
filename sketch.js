@@ -10,7 +10,7 @@ function draw() {
   var volume = mic.getLevel();
   
   //If the volume is not enought, re-map it (set a higher newMax).
-  var newMax = 80;
+  var newMax = 50;
   volume = map(volume,0,1,0,newMax);
   
   sizeCol = map(volume, 0,1,0,255);
